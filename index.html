@@ -12,8 +12,16 @@
 
     <link rel="icon" href="favicon.ico">
 
+    <!-- JQuery -->
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+            crossorigin="anonymous"></script>
+
+    <!-- Internal -->
     <link href="style.css" rel="stylesheet">
     <script src="src/core.js"></script>
+    <script src="src/constants.js"></script>
     <script src="src/block.js"></script>
     <script src="src/bitCalc.js"></script>
     <script src="src/tetro.js"></script>
@@ -35,6 +43,9 @@
         <label id="_label_arrangement_title">Variation:</label>
         <input type="range" id="_range_arrangement" min="0" value="0">
         <label id="_label_arrangement"></label>
+    </div>
+    <div id="_div_puzzle_info">
+        <label id="_label_puzzle_title">N/A</label>
     </div>
     <div id="_div_main_svg">
         <svg id="_svg_main" viewBox="0,0,900,900">

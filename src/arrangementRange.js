@@ -19,7 +19,7 @@
             this.getRange().max = `${sols.length - 1}`;
             if (sols.length == 0) {
                 this.setVisible(false);
-                NNKPZ.MainSVG.drawSolution(Dom.getTetro(), '');
+                NNKPZ.MainSVG.drawSolution(NNKPZ.Dom.getTetro(), '', NNKPZ.Dom.getTetroColor());
             }
             else {
                 if (sols.length == 1) {

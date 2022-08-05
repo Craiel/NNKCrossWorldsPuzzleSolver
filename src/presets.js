@@ -1,5 +1,6 @@
 NNKPZ.data.presets = [
     {
+        name: "Chick",
         data: NNKPZ.Tetro.binsToTetro([
             0b000000000,
             0b000000000,
@@ -13,6 +14,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Chicken",
         data: NNKPZ.Tetro.binsToTetro([
             0b000000000,
             0b001100000,
@@ -26,6 +28,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Doberman",
         data: NNKPZ.Tetro.binsToTetro([
             0b011000000,
             0b111000000,
@@ -39,6 +42,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Penguin",
         data: NNKPZ.Tetro.binsToTetro([
             0b000011000,
             0b000111000,
@@ -52,6 +56,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Ghost",
         data: NNKPZ.Tetro.binsToTetro([
             0b000011000,
             0b000111100,
@@ -65,6 +70,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Crab",
         data: NNKPZ.Tetro.binsToTetro([
             0b111000111,
             0b100000001,
@@ -78,6 +84,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Melon",
         data: NNKPZ.Tetro.binsToTetro([
             0b000111000,
             0b000010000,
@@ -91,6 +98,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Deer",
         data: NNKPZ.Tetro.binsToTetro([
             0b000100100,
             0b000111110,
@@ -104,6 +112,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Cactus",
         data: NNKPZ.Tetro.binsToTetro([
             0b001000000,
             0b011010100,
@@ -117,6 +126,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Elephant",
         data: NNKPZ.Tetro.binsToTetro([
             0b110000000,
             0b100110000,
@@ -130,6 +140,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Cross",
         data: NNKPZ.Tetro.binsToTetro([
             0b000111000,
             0b000111000,
@@ -143,6 +154,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Face",
         data: NNKPZ.Tetro.binsToTetro([
             0b000111000,
             0b001111100,
@@ -156,6 +168,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "Pierced Heart",
         data: NNKPZ.Tetro.binsToTetro([
             0b001000100,
             0b011101110,
@@ -169,6 +182,7 @@ NNKPZ.data.presets = [
         ])
     },
     {
+        name: "House",
         data: NNKPZ.Tetro.binsToTetro([
             0b000111000,
             0b001111100,
@@ -181,6 +195,113 @@ NNKPZ.data.presets = [
             0b011110010
         ])
     },
+    {
+        name: "Natrum",
+        color: NNKPZ.TileColors.Green1,
+        data: NNKPZ.Tetro.binsToTetro([
+            0b000101000,
+            0b001101100,
+            0b000101000,
+            0b011111110,
+            0b010111010,
+            0b111010111,
+            0b111111111,
+            0b011000110,
+            0b001101100
+        ])
+    },
+    {
+        name: "Proto Mark 13",
+        color: NNKPZ.TileColors.Blue1,
+        data: NNKPZ.Tetro.binsToTetro([
+            0b000000100,
+            0b000111100,
+            0b001111110,
+            0b010111010,
+            0b011111110,
+            0b011111110,
+            0b011010110,
+            0b011111110,
+            0b001000100
+        ])
+    },
+    {
+        name: "Volcanord",
+        color: NNKPZ.TileColors.Red1,
+        data: NNKPZ.Tetro.binsToTetro([
+            0b100111001,
+            0b110101011,
+            0b110101011,
+            0b110101011,
+            0b100111001,
+            0b001111100,
+            0b001010100,
+            0b001111100,
+            0b000111000
+        ])
+    },
+    {
+        name: "Silverbeard",
+        color: NNKPZ.TileColors.Purple1,
+        data: NNKPZ.Tetro.binsToTetro([
+            0b000111000,
+            0b011111110,
+            0b111111111,
+            0b111010111,
+            0b110101011,
+            0b111111111,
+            0b011111110,
+            0b111010111,
+            0b101010101
+        ])
+    },
+    {
+        name: "Vulcan",
+        color: NNKPZ.TileColors.Purple1,
+        data: NNKPZ.Tetro.binsToTetro([
+            0b111101111,
+            0b111101111,
+            0b111111111,
+            0b111111111,
+            0b010010010,
+            0b111010111,
+            0b011111110,
+            0b001000100,
+            0b011111110
+        ])
+    },
+    {
+        name: "Servant's Lamp",
+        color: NNKPZ.TileColors.Yellow1,
+        data: NNKPZ.Tetro.binsToTetro([
+            0b000010000,
+            0b000111000,
+            0b111111111,
+            0b101111110,
+            0b101111110,
+            0b011111100,
+            0b000111000,
+            0b000010000,
+            0b000111000
+        ])
+    },
+    {
+        name: "Dusk Genie",
+        color: NNKPZ.TileColors.Green2,
+        data: NNKPZ.Tetro.binsToTetro([
+            0b001111100,
+            0b101111101,
+            0b101111101,
+            0b111111111,
+            0b010010010,
+            0b011010110,
+            0b011111110,
+            0b011000110,
+            0b001111100
+        ])
+    },
+
+    // --- Unreleased
     {
         data: NNKPZ.Tetro.binsToTetro([
             0b000010000,
@@ -261,19 +382,6 @@ NNKPZ.data.presets = [
     },
     {
         data: NNKPZ.Tetro.binsToTetro([
-            0b000101000,
-            0b001101100,
-            0b000101000,
-            0b011111110,
-            0b010111010,
-            0b111010111,
-            0b111111111,
-            0b011000110,
-            0b001101100
-        ])
-    },
-    {
-        data: NNKPZ.Tetro.binsToTetro([
             0b001000100,
             0b011000110,
             0b001101100,
@@ -283,19 +391,6 @@ NNKPZ.data.presets = [
             0b111111111,
             0b011000110,
             0b001111100
-        ])
-    },
-    {
-        data: NNKPZ.Tetro.binsToTetro([
-            0b000000100,
-            0b000111100,
-            0b001111110,
-            0b010111010,
-            0b011111110,
-            0b011111110,
-            0b011010110,
-            0b011111110,
-            0b001000100
         ])
     },
     {
@@ -313,45 +408,6 @@ NNKPZ.data.presets = [
     },
     {
         data: NNKPZ.Tetro.binsToTetro([
-            0b100111001,
-            0b110101011,
-            0b110101011,
-            0b110101011,
-            0b100111001,
-            0b001111100,
-            0b001010100,
-            0b001111100,
-            0b000111000
-        ])
-    },
-    {
-        data: NNKPZ.Tetro.binsToTetro([
-            0b000111000,
-            0b011111110,
-            0b111111111,
-            0b111010111,
-            0b110101011,
-            0b111111111,
-            0b011111110,
-            0b111010111,
-            0b101010101
-        ])
-    },
-    {
-        data: NNKPZ.Tetro.binsToTetro([
-            0b111101111,
-            0b111101111,
-            0b111111111,
-            0b111111111,
-            0b010010010,
-            0b111010111,
-            0b011111110,
-            0b001000100,
-            0b011111110
-        ])
-    },
-    {
-        data: NNKPZ.Tetro.binsToTetro([
             0b000111000,
             0b001101100,
             0b011111110,
@@ -361,32 +417,6 @@ NNKPZ.data.presets = [
             0b011111111,
             0b000000111,
             0b000000011
-        ])
-    },
-    {
-        data: NNKPZ.Tetro.binsToTetro([
-            0b000010000,
-            0b000111000,
-            0b111111111,
-            0b101111110,
-            0b101111110,
-            0b011111100,
-            0b000111000,
-            0b000010000,
-            0b000111000
-        ])
-    },
-    {
-        data: NNKPZ.Tetro.binsToTetro([
-            0b001111100,
-            0b101111101,
-            0b101111101,
-            0b111111111,
-            0b010010010,
-            0b011010110,
-            0b011111110,
-            0b011000110,
-            0b001111100
         ])
     },
     {

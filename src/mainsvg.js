@@ -74,15 +74,21 @@
                 rects.item(y * 9 + x).classList.add('_active');
             }
         }
-        static drawSolution(tetro, solution) {
+        static drawSolution(tetro, solution, color) {
             this.getSolutionGroup().innerHTML = '';
             const blockLines = NNKPZ.Tetro.solutionToBlockLines(tetro, solution);
             for (let i = 0; i < blockLines.length; i++) {
                 const blockLine = blockLines[i];
-                NNKPZ.SVG.drawBlock(this.getSolutionGroup(), blockLine, {
+                var attr = {
                     'stroke-width': 80,
                     'stroke-linecap': 'square'
-                }, 100, { x: 50, y: 50 });
+                };
+                var blocks = NNKPZ.SVG.drawBlock(this.getSolutionGroup(), blockLine, attr, 100, { x: 50, y: 50 });
+                console.log(blocks);
+                for(var b = 0; b < blocks.length; b++) {
+                    let bEl = $(blocks[b]);
+                    bEl.addClass('tile-color-' + color);
+                }
             }
         }
         static getTetroGroup() {

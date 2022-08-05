@@ -67,7 +67,13 @@
 #_label_arrangement_title {
     width: 100px;
 }
-
+#_label_puzzle_title {
+    font-weight: bold;
+    font-size: large;
+}
+#_div_puzzle_info {
+    text-align: center;
+}
 #_range_main,
 #_range_arrangement {
     margin-left: 5px;
@@ -91,11 +97,36 @@
 }
 #_group_solution line,
 ._table_block {
-    stroke: rgb(255, 176, 79);
+    stroke: rgb(217, 145, 100);
 }
 #_group_tetro rect._active {
     fill: rgb(236, 241, 230);
 }
+
+.tile-color-g1 {
+    stroke: rgb(111, 182, 55) !important;
+}
+
+.tile-color-g2 {
+    stroke: rgb(19, 155, 82) !important;
+}
+
+.tile-color-b1 {
+    stroke: rgb(45, 153, 199) !important;
+}
+
+.tile-color-r1 {
+    stroke: rgb(191, 70, 65) !important;
+}
+
+.tile-color-y1 {
+    stroke: rgb(233, 177, 69) !important;
+}
+
+.tile-color-p1 {
+    stroke: rgb(122, 97, 202) !important;
+}
+
 #_div_custom,
 #_div_main_control,
 #_div_main_control2,

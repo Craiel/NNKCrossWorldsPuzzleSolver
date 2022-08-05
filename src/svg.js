@@ -9,10 +9,13 @@
             return el;
         }
         static drawBlock(group, blockLine, attr, size, offset) {
+            var result = [];
             for (let i = 0; i < blockLine.length; i++) {
                 const line = blockLine[i];
-                group.appendChild(SVG.create('line', Object.assign(Object.assign({}, attr), { x1: line.x1 * size + offset.x, y1: line.y1 * size + offset.y, x2: line.x2 * size + offset.x, y2: line.y2 * size + offset.y })));
+                var el = group.appendChild(SVG.create('line', Object.assign(Object.assign({}, attr), { x1: line.x1 * size + offset.x, y1: line.y1 * size + offset.y, x2: line.x2 * size + offset.x, y2: line.y2 * size + offset.y })));
+                result.push(el);
             }
+            return result;
         }
     }
 

@@ -10,6 +10,7 @@
             this.onChangeTetro();
         }
         static onChangeTetro() {
+            $('#_label_puzzle_title').text(this.getTetroName());
             NNKPZ.MainSVG.drawTetro(this.getTetro());
             NNKPZ.ResultTable.reset();
         }
@@ -20,11 +21,33 @@
             const index = NNKPZ.MainRange.getIndex();
             return NNKPZ.data.presets[index].data;
         }
+        static getTetroName() {
+            if (NNKPZ.MainSVG.customMode) {
+                return "Custom";
+            }
+            const index = NNKPZ.MainRange.getIndex();
+            if(NNKPZ.data.presets[index].name === undefined) {
+                return "- Unreleased -";
+            }
+
+            return NNKPZ.data.presets[index].name;
+        }
+        static getTetroColor() {
+            if (NNKPZ.MainSVG.customMode) {
+                return NNKPZ.TileColors.Default;
+            }
+            const index = NNKPZ.MainRange.getIndex();
+            if(NNKPZ.data.presets[index].color === undefined) {
+                return NNKPZ.TileColors.Default;
+            }
+
+            return NNKPZ.data.presets[index].color;
+        }
         static onChangeSols(sols) {
             NNKPZ.ArrangementRange.applySols(sols);
         }
         static onChangeArrange(index) {
-            NNKPZ.MainSVG.drawSolution(this.getTetro(), NNKPZ.ResultTable.getCurrentSols()[index]);
+            NNKPZ.MainSVG.drawSolution(this.getTetro(), NNKPZ.ResultTable.getCurrentSols()[index], this.getTetroColor());
         }
         static download(input) {
             const el = document.getElementById('_tetro_download');
