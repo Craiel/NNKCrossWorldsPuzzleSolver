@@ -1,0 +1,195 @@
+@supports not (-webkit-touch-callout: none) {
+    #_div_program * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+    }
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+#_div_program,
+#_table_result,
+#_table_result thead,
+#_table_result tbody tr,
+#_table_level,
+#_table_level thead,
+#_table_level tbody {
+    width: 450px;
+}
+#_textarea_custom {
+    width: 444px;
+}
+@media only screen and (max-width: 480px) {
+    #_div_program,
+    #_table_result,
+    #_table_result thead,
+    #_table_result tbody tr,
+    #_table_level,
+    #_table_level thead,
+    #_table_level tbody {
+        width: 100%;
+    }
+    #_textarea_custom {
+        width: 98%;
+    }
+}
+#_table_result tbody {
+    height: 300px;
+}
+#_div_main_control,
+#_div_arrangement_control,
+#_div_main_control2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#_div_main_control > *,
+#_div_arrangement_control > *,
+#_div_main_control2 > * {
+    text-align: center;
+}
+#_label_main_title,
+#_label_main,
+#_label_arrangement {
+    width: 50px;
+}
+
+#_label_arrangement_title {
+    width: 100px;
+}
+
+#_range_main,
+#_range_arrangement {
+    margin-left: 5px;
+    flex-grow: 1;
+    margin-right: 5px;
+}
+#_button_main,
+#_button_preset_left,
+#_button_preset_right {
+    flex-grow: 1;
+}
+#_button_preset_right {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#_div_main_svg {
+    margin-bottom: 20px;
+}
+#_group_tetro rect {
+    fill: rgb(81, 139, 143);
+}
+#_group_solution line,
+._table_block {
+    stroke: rgb(255, 176, 79);
+}
+#_group_tetro rect._active {
+    fill: rgb(236, 241, 230);
+}
+#_div_custom,
+#_div_main_control,
+#_div_main_control2,
+#_div_arrangement_control,
+#_div_result_table {
+    margin-bottom: 20px;
+}
+#_table_result {
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    border: solid 1px #aaa;
+}
+#_table_result tbody {
+    display: block;
+    overflow: auto;
+}
+#_table_result thead,
+#_table_result tbody tr {
+    display: table;
+    table-layout: fixed;
+}
+#_table_result thead #_tr_sort td:nth-child(2):hover,
+#_table_result thead #_tr_sort td:nth-child(3):hover,
+#_table_result thead #_tr_sort td:nth-child(4):hover,
+#_table_result thead #_tr_sort td:nth-child(5):hover,
+#_table_result thead #_tr_sort td:nth-child(6):hover,
+#_table_result thead #_tr_sort td:nth-child(7):hover,
+#_table_result thead #_tr_sort td:nth-child(8):hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+#_table_result thead tr:nth-child(5) td {
+    border-bottom: solid 1px #aaa;
+}
+#_table_result thead td svg {
+    width: 80%;
+    height: 50px;
+}
+#_table_result thead td input {
+    width: 80%;
+}
+#_table_result tbody tr:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+#_table_result tbody tr._selected {
+    background-color: #ddd;
+}
+#_table_result tbody tr td:first-child {
+    color: blue;
+}
+#_table_level {
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    border: solid 1px #aaa;
+}
+#_table_level thead,
+#_table_level tbody {
+    display: table;
+    table-layout: fixed;
+}
+#_table_level thead td svg {
+    width: 80%;
+    height: 50px;
+}
+#_table_level tbody td input {
+    width: 80%;
+}
+#_div_header {
+    margin-bottom: 40px;
+}
+#_div_description {
+    margin-top: 80px;
+}
+#_textarea_custom {
+    display: block;
+    resize: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#_div_custom_inner_control {
+    display: flex;
+}
+#_button_custom_export {
+    margin-left: 5px;
+}
+#_button_custom_import {
+    margin-right: 5px;
+}
+#_button_custom_refresh,
+#_button_custom_export,
+#_button_custom_import,
+#_button_custom {
+    width: 80px;
+}

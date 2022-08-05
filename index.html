@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Ni No Kuni Crossworlds - Puzzle Solver</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="Puzzle Solver for Ni No Kuni Crossworlds" name="description">
+    <meta content="noimageindex noarchive" name="robots"/>
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="src/core.js"></script>
+    <script src="src/block.js"></script>
+    <script src="src/bitCalc.js"></script>
+    <script src="src/tetro.js"></script>
+    <script src="src/presets.js"></script>
+    <script src="src/shapes.js"></script>
+    <script src="src/svg.js"></script>
+    <script src="src/mainsvg.js"></script>
+    <script src="src/mainRange.js"></script>
+    <script src="src/resultTable.js"></script>
+    <script src="src/arrangementRange.js"></script>
+    <script src="src/customInput.js"></script>
+    <script src="src/dom.js"></script>
+    <script src="src/loader.js"></script>
+</head>
+<body>
+<div class="content">
+<div id="_div_program">
+    <div id="_div_arrangement_control" style="visibility: hidden;">
+        <label id="_label_arrangement_title">Variation:</label>
+        <input type="range" id="_range_arrangement" min="0" value="0">
+        <label id="_label_arrangement"></label>
+    </div>
+    <div id="_div_main_svg">
+        <svg id="_svg_main" viewBox="0,0,900,900">
+            <g id="_group_tetro"></g>
+            <g id="_group_solution"></g>
+        </svg>
+    </div>
+    <div id="_div_main_control">
+        <label id="_label_main_title">Puzzle:</label>
+        <input type="range" id="_range_main" min="0" value="0" max="35">
+        <label id="_label_main">1/36</label>
+    </div>
+    <div id="_div_main_control2">
+        <input type="button" id="_button_preset_left" value="◀">
+        <input type="button" id="_button_preset_right" value="▶">
+        <input type="button" id="_button_main" value="Calculate">
+    </div>
+    <div id="_div_result_table">
+        <table id="_table_result">
+            <thead>
+            <tr id="_tr_shape">
+                <td>Block</td>
+                <td><svg viewBox="0,0,100,100"><g><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="37.5" x2="62.5" y2="37.5"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="62.5" x2="62.5" y2="62.5"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="37.5" x2="37.5" y2="62.5"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="62.5" y1="37.5" x2="62.5" y2="62.5"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="50" x2="62.5" y2="50"></line></g></svg></td>
+                <td><svg viewBox="0,0,100,100"><g><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="50" y1="12.5" x2="50" y2="87.5"></line></g></svg></td>
+                <td><svg viewBox="0,0,100,100"><g><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="50" x2="62.5" y2="50"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="62.5" y1="25" x2="62.5" y2="75"></line></g></svg></td>
+                <td><svg viewBox="0,0,100,100"><g><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="25" x2="62.5" y2="25"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="62.5" y1="25" x2="62.5" y2="75"></line></g></svg></td>
+                <td><svg viewBox="0,0,100,100"><g><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="25" x2="62.5" y2="25"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="25" x2="37.5" y2="75"></line></g></svg></td>
+                <td><svg viewBox="0,0,100,100"><g><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="50" x2="62.5" y2="50"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="25" x2="37.5" y2="50"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="62.5" y1="50" x2="62.5" y2="75"></line></g></svg></td>
+                <td><svg viewBox="0,0,100,100"><g><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="50" x2="62.5" y2="50"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="37.5" y1="50" x2="37.5" y2="75"></line><line stroke-width="25" stroke-linecap="square" class="_table_block" x1="62.5" y1="25" x2="62.5" y2="50"></line></g></svg></td>
+            </tr>
+            <tr>
+                <td>Attribute</td>
+                <td>ATK</td>
+                <td>DEF</td>
+                <td>HP</td>
+                <td>EVA</td>
+                <td>ACC</td>
+                <td>CRES</td>
+                <td>CRIT</td>
+            </tr>
+            <tr id="_tr_sort">
+                <td>Sort</td>
+                <td>▲</td>
+                <td>▲</td>
+                <td>▲</td>
+                <td>▲</td>
+                <td>▲</td>
+                <td>▲</td>
+                <td>▲</td>
+            </tr>
+            <tr id="_tr_min_filter">
+                <td>Min</td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+            </tr>
+            <tr id="_tr_max_filter">
+                <td>Max</td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+                <td><input type="number" min="0" max="0" inputmode="numeric" pattern="[0-9]*" value="0"></td>
+            </tr>
+            </thead>
+            <tbody id="_table_body"></tbody>
+        </table>
+    </div>
+    <div id="_div_custom">
+        <label>
+            <input type="checkbox" id="_checkbox_custom">
+            Custom
+        </label>
+        <div id="_div_custom_inner" style="display: none;">
+            <textarea id="_textarea_custom" rows="9"></textarea>
+            <div id="_div_custom_inner_control">
+                <input id="_button_custom_refresh" type="button" value="Refresh">
+                <input id="_button_custom_export" type="button" value="Export">
+                <div style="flex-grow: 1;"></div>
+                <input id="_button_custom_import" type="button" value="Import">
+                <input id="_button_custom" type="button" value="Apply">
+            </div>
+            <a id="_tetro_download" download="puzzle.tetro" style="display: none;"></a>
+            <input id="_tetro_upload" type="file" accept=".tetro" style="display: none;">
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
